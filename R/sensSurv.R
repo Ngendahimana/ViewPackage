@@ -12,7 +12,8 @@
 #' @export
 #' @references Section 4.4.8. of Rosenbaum PR (2002) Observational Studies, 2nd Edition.
 #' @examples
-#' senseSurv()
+#' data("Telemedicine.matchedsample")
+#' sensSurv(data = Telemedicine.matchedsample,exp = "Telehealth.n",outcome = "Graftstatus",failtime = "failtimetxp", Gamma=1.2,alpha = 0.05, Gammainterval = 0.05)
 
 sensSurv = function(data, exp, outcome, failtime,Gamma,alpha,Gammainterval) {
   results = list()
